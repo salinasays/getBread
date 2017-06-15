@@ -11,6 +11,15 @@ var Checkout = createReactClass ({
 
 	componentDidMount: function (){
 
+		$.ajax({
+			url: 'api.getbread.com/carts/:cardId',
+			type: 'GET',
+			data: this.state
+		})
+		.done((data) => {
+			console.log(data)
+		})
+		
 		var items = [];
 
 		var opts = {
@@ -33,38 +42,32 @@ var Checkout = createReactClass ({
 
 		// bread.checkout(opts);
 
-		$.ajax({
-			url: 'api.getbread.com/carts/:cardId',
-			type: 'GET',
-			data: this.state
-		})
-		.done((data) => {
-			console.log(data)
-		})
+
 	},
 
 	render: function(){
 		return (
 			<div>
+			<div className="cart">
+				<h2>Shopping Bag</h2>
+				<ol>
+					<li>
+						<h3>Crescent Hoops Brass</h3>
+						<p>Lila Rice</p>
+						<p className="price">$100</p>
+					</li>
+				</ol>
+			</div>
 
-				<p>Testing</p>
+			
+			<h3 className="total">Total: $100</h3>
 
-				<form id="checkout-form" action="checkout" method="post">
-      		<div id='bread-checkout-btn'></div>
-   			</form>
+				<div className="tax">
+					<p>Calculate Tax</p> 
+					<input placeholder="Zipcode"></input>
+				</div>
 
-   			{
-   				// var items = [];
-   				// cart.products.forEach(function(p) {
-   				// 	items.push (
-   				// 	{
-   				// 		name: 
-   				// 	}
-   				// 	)
-   				// })
-   			}
-
-
+			<button className="chktout-btn">Checkout</button>
 			</div>
 		)
 	}

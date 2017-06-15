@@ -22,6 +22,20 @@ a:link {
   text-decoration: none;
 }
 
+button {
+    background-color: red; 
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 .products {
   list-style-type: none;
   margin: 0;
@@ -39,4 +53,23 @@ a:link {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+/*CHECKOUT.JSX*/
+
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+
+.total {
+  float: left;
+}
+
+.tax {
+  float: right;
+}
+
+.chktout-btn {
+  float: right;
 }
