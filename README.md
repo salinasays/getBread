@@ -6,7 +6,7 @@ Red Coral is a jewelry ecommerce store integrated with Bread's API.
 
 "Bread provides a technology toolkit that allows merchants to integrate financing at different points in the shopping experience, boosting conversions and average order values with a fast checkout and a simple, transparent, low-rate credit product."
 
-Product images were borrowed from [Bona Drag](www.bonadrag.com).
+Product images were borrowed from [Bona Drag](http://bonadrag.com/).
 
 ## To Run
 
